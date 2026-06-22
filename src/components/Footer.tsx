@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cross, MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
+import { MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -52,8 +52,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Cross className="text-brand-accent w-6 h-6" />
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="/images/logo.webp" 
+                  alt="Herederos de Dios Logo" 
+                  className="w-12 h-12 object-cover rounded-full bg-white shadow-md"
+                />
                 <span className="font-heading font-bold text-lg text-white">Herederos de Dios</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
