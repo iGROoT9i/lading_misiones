@@ -28,20 +28,17 @@ export default function Footer() {
             <button className="bg-brand-accent text-brand-dark px-10 py-5 rounded-full font-bold text-lg hover:bg-yellow-400 hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3">
               <Heart className="w-6 h-6 fill-current" /> Hacer una Donación
             </button>
-            <button className="bg-transparent border border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3">
+            <a href="https://wa.me/51910348794" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3">
               <Smartphone className="w-6 h-6 text-green-400" /> Contáctanos
-            </button>
+            </a>
           </div>
 
           <div className="mt-12 inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-left">
             <p className="text-slate-300 text-sm uppercase tracking-wider mb-2 font-semibold">
-              Cuentas Bancarias / Yape
+              Donaciones por Yape
             </p>
             <p className="text-white flex items-center gap-2">
-              <Building className="text-brand-accent w-5 h-5" /> BCP: 191-0000000-0-00
-            </p>
-            <p className="text-white mt-2 flex items-center gap-2">
-              <Smartphone className="text-brand-accent w-5 h-5" /> Yape: 999 999 999 (Nombre del titular)
+              <Smartphone className="text-brand-accent w-5 h-5" /> 910 348 794 (Elias La Torre Murayari)
             </p>
           </div>
         </motion.div>
@@ -75,7 +72,7 @@ export default function Footer() {
               <ul className="space-y-4 text-sm text-slate-400">
                 <li className="flex items-center gap-3"><MapPin className="w-4 h-4 text-brand-accent"/> Loreto, Perú (Sede Central)</li>
                 <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-brand-accent"/> contacto@herederosdedios.org</li>
-                <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-brand-accent"/> +51 900 000 000</li>
+                <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-brand-accent"/> +51 910 348 794</li>
               </ul>
             </div>
           </div>
@@ -85,7 +82,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 text-sm text-slate-500">
               <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
-              <a href="#" className="hover:text-white transition-colors">Resolución N° 124-97-SUNARP</a>
+              <a href="#" className="hover:text-white transition-colors">Partida Registral N° 11178414</a>
             </div>
           </div>
         </div>
