@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cross, MapPin, Mail, Phone, Heart, Smartphone } from 'lucide-react';
+import { Cross, MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -35,10 +35,13 @@ export default function Footer() {
 
           <div className="mt-12 inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-left">
             <p className="text-slate-300 text-sm uppercase tracking-wider mb-2 font-semibold">
-              Donaciones por Yape
+              Cuentas Bancarias / Yape
+            </p>
+            <p className="text-white flex items-center gap-2 mb-2">
+              <Building className="text-brand-accent w-5 h-5" /> BCP: 191-0000000-0-00
             </p>
             <p className="text-white flex items-center gap-2">
-              <Smartphone className="text-brand-accent w-5 h-5" /> 910 348 794 (Elias La Torre Murayari)
+              <Smartphone className="text-brand-accent w-5 h-5" /> Yape: 910 348 794 (Elias La Torre Murayari)
             </p>
           </div>
         </motion.div>
