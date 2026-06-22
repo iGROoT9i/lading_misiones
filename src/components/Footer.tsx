@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cross, MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
+import { Cross, MapPin, Mail, Phone, Heart, Smartphone } from 'lucide-react';
 
 export default function Footer() {
   return (
