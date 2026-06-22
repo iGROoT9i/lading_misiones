@@ -1,37 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-// Floating Orbs Component
-const FloatingOrbs = () => {
-  const orbs = Array.from({ length: 15 });
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      {orbs.map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-brand-accent mix-blend-screen opacity-30 blur-xl"
-          style={{
-            width: Math.random() * 100 + 50 + 'px',
-            height: Math.random() * 100 + 50 + 'px',
-            top: Math.random() * 100 + '%',
-            left: Math.random() * 100 + '%',
-          }}
-          animate={{
-            y: [0, Math.random() * -100 - 50],
-            x: [0, Math.random() * 100 - 50],
-            opacity: [0.1, 0.4, 0.1],
-          }}
-          transition={{
-            duration: Math.random() * 10 + 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
-    </div>
-  );
-};
-
 export default function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -42,40 +11,37 @@ export default function Hero() {
   // Parallax effect: moves down half as fast as you scroll
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
       {/* Background Image with Parallax */}
       <motion.div 
-        className="absolute inset-0 z-0"
         style={{ y: backgroundY }}
+        className="absolute inset-0 z-0"
       >
         <img
           src="/images/fe-en-accion-105.webp"
-          alt="Misión de ayuda"
-          className="w-full h-full object-cover object-center scale-110"
+          alt="Misión de Cristo"
+          className="w-full h-full object-cover opacity-60"
         />
-        {/* Dark Overlay */}
+        {/* Modern dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/50 to-brand-dark"></div>
       </motion.div>
 
-      {/* Floating Light Particles */}
-      <FloatingOrbs />
-
       {/* Main Content with Parallax & Fade out */}
       <motion.div
-        style={{ y: textY, opacity }}
+        style={{ y: textY, opacity: textOpacity }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16"
+        className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-16 pointer-events-auto"
       >
         <motion.span 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-4 block"
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="inline-block py-1 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-accent text-sm font-semibold tracking-widest uppercase mb-8"
         >
           Asociación Misión de Cristo Herederos de Dios
         </motion.span>
@@ -92,19 +58,36 @@ export default function Hero() {
           evangelizando, formando líderes y llevando ayuda integral a las comunidades más vulnerables del Perú.
         </p>
         
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href="#impacto"
-            className="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-800 transition-all shadow-[0_0_20px_rgba(30,58,138,0.5)] hover:shadow-[0_0_30px_rgba(30,58,138,0.8)]"
+            className="w-full sm:w-auto px-8 py-4 bg-brand-primary text-white rounded-full font-bold text-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-brand-primary/30"
           >
-            Conoce Nuestro Impacto
+            Nuestro Impacto
           </a>
           <a
             href="#donar"
-            className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-dark transition-all"
+            className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/10 hover:border-white transition-all duration-300"
           >
             Únete a la Misión
           </a>
+        </div>
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
+      >
+        <span className="text-white/50 text-xs tracking-widest uppercase mb-2">Explorar</span>
+        <div className="w-[1px] h-12 bg-white/20 overflow-hidden">
+          <motion.div 
+            animate={{ y: [0, 48] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+            className="w-full h-1/2 bg-brand-accent"
+          />
         </div>
       </motion.div>
     </section>

@@ -19,10 +19,10 @@ export default function Globe3D() {
       mapSamples: 16000,
       mapBrightness: 6,
       // Color matching your brand (slate-900 / blue-800 mix)
-      baseColor: [0.06, 0.09, 0.16], 
+      baseColor: [0.1, 0.2, 0.4], 
       // Marker color matching your brand-accent (amber/gold)
-      markerColor: [0.96, 0.62, 0.04], 
-      glowColor: [0.1, 0.2, 0.5],
+      markerColor: [1, 0.8, 0.1], 
+      glowColor: [0.2, 0.3, 0.6],
       markers: [
         // Coordinates for Loreto, Peru
         { location: [-3.74, -73.25], size: 0.1 }
@@ -39,7 +39,7 @@ export default function Globe3D() {
   }, []);
 
   return (
-    <div style={{ width: '100%', maxWidth: '350px', aspectRatio: '1/1' }} className="flex items-center justify-center opacity-40 mx-auto">
+    <div style={{ width: '100%', maxWidth: '350px', aspectRatio: '1/1' }} className="flex items-center justify-center opacity-90 mx-auto">
       <canvas
         ref={canvasRef}
         style={{ width: '100%', height: '100%', display: 'block' }}
