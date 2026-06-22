@@ -24,8 +24,8 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 border-b ${
         isScrolled
-          ? 'bg-white/90 shadow-md backdrop-blur-lg border-transparent'
-          : 'bg-white/10 border-white/10 backdrop-blur-sm'
+          ? 'bg-white/95 shadow-[0_4px_30px_rgba(0,0,0,0.05)] backdrop-blur-xl border-white/20'
+          : 'bg-transparent border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,11 +46,12 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`transition-colors font-medium text-sm tracking-wide shadow-sm hover:text-brand-accent ${
-                  isScrolled ? 'text-slate-600' : 'text-white'
+                className={`relative group transition-colors font-medium text-sm tracking-wide ${
+                  isScrolled ? 'text-slate-600 hover:text-brand-primary' : 'text-slate-200 hover:text-white'
                 }`}
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <a

@@ -48,7 +48,7 @@ export default function Objetivos() {
   ];
 
   return (
-    <section id="objetivos" className="py-24 bg-brand-dark relative overflow-hidden">
+    <section id="objetivos" className="py-24 bg-brand-dark relative overflow-hidden scroll-mt-20">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-primary/20 to-transparent"></div>
       <div className="absolute -left-20 top-20 w-72 h-72 bg-brand-accent rounded-full mix-blend-multiply filter blur-[100px] opacity-20"></div>

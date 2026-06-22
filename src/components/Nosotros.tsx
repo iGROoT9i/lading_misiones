@@ -12,7 +12,7 @@ export default function Nosotros() {
   };
 
   return (
-    <section id="nosotros" className="relative z-20 -mt-10 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16 md:mb-24">
+    <section id="nosotros" className="relative z-20 -mt-10 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16 md:mb-24 scroll-mt-32">
       <div className="grid md:grid-cols-2 gap-6">
         <motion.div
           custom={0}

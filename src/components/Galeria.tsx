@@ -46,7 +46,7 @@ export default function Galeria() {
   if (currentImages.length < 5 && images.length >= 5) return null;
 
   return (
-    <section id="galeria" className="py-24 bg-slate-50">
+    <section id="galeria" className="py-24 bg-slate-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

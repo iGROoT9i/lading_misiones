@@ -18,7 +18,7 @@ export default function Impacto() {
   };
 
   return (
-    <section id="impacto" className="py-20 bg-white">
+    <section id="impacto" className="py-20 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
