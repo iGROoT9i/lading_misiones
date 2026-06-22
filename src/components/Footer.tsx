@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
+import { MapPin, Mail, Phone, Heart, Smartphone, Building, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -60,10 +60,22 @@ export default function Footer() {
                 />
                 <span className="font-heading font-bold text-lg text-white">Herederos de Dios</span>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+              <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
                 Trabajando incansablemente para llevar amor, esperanza y ayuda práctica a las comunidades vulnerables,
                 formando líderes para el Reino de Dios.
               </p>
+              <div className="flex gap-4">
+                <a 
+                  href="https://www.facebook.com/Mc.HerederosdeDios" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-white/5 hover:bg-[#1877F2] p-2.5 rounded-full transition-all text-slate-300 hover:text-white shadow-lg hover:shadow-[#1877F2]/50 hover:-translate-y-1"
+                  aria-label="Síguenos en Facebook"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                {/* Puedes agregar más iconos aquí en el futuro (Instagram, YouTube) */}
+              </div>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
