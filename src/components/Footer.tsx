@@ -73,8 +73,8 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-semibold mb-4">Contacto</h4>
               <ul className="space-y-4 text-sm text-slate-400">
-                <li className="flex items-center gap-3"><MapPin className="w-4 h-4 text-brand-accent"/> Loreto, Perú (Sede Central)</li>
-                <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-brand-accent"/> contacto@herederosdedios.org</li>
+                <li className="flex items-center gap-3"><MapPin className="w-4 h-4 text-brand-accent"/> Calle Bellavista Mz B. Lt 19, Nauta</li>
+                <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-brand-accent"/> mc.herederos2026@hotmail.com</li>
                 <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-brand-accent"/> +51 910 348 794</li>
               </ul>
             </div>
