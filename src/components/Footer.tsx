@@ -1,0 +1,95 @@
+import { motion } from 'framer-motion';
+import { Cross, MapPin, Mail, Phone, Heart, Smartphone, Building } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <>
+      {/* DONAR SECTION */}
+      <section id="donar" className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-brand-dark"></div>
+        {/* Background Decorative Elements */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="relative z-10 max-w-4xl mx-auto px-4 text-center"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">¿Sientes el llamado a ayudar?</h2>
+          <p className="text-xl text-slate-300 mb-10 leading-relaxed">
+            Sé un canal de bendición hoy mismo. Tu contribución nos permite seguir recibiendo donaciones para
+            extender nuestra labor social, mantener comedores y llevar esperanza a la población de Loreto y todo el
+            país.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button className="bg-brand-accent text-brand-dark px-10 py-5 rounded-full font-bold text-lg hover:bg-yellow-400 hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3">
+              <Heart className="w-6 h-6 fill-current" /> Hacer una Donación
+            </button>
+            <button className="bg-transparent border border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3">
+              <Smartphone className="w-6 h-6 text-green-400" /> Contáctanos
+            </button>
+          </div>
+
+          <div className="mt-12 inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-left">
+            <p className="text-slate-300 text-sm uppercase tracking-wider mb-2 font-semibold">
+              Cuentas Bancarias / Yape
+            </p>
+            <p className="text-white flex items-center gap-2">
+              <Building className="text-brand-accent w-5 h-5" /> BCP: 191-0000000-0-00
+            </p>
+            <p className="text-white mt-2 flex items-center gap-2">
+              <Smartphone className="text-brand-accent w-5 h-5" /> Yape: 999 999 999 (Nombre del titular)
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* FOOTER SECTION */}
+      <footer className="bg-[#0b1121] py-12 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Cross className="text-brand-accent w-6 h-6" />
+                <span className="font-heading font-bold text-lg text-white">Herederos de Dios</span>
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+                Trabajando incansablemente para llevar amor, esperanza y ayuda práctica a las comunidades vulnerables,
+                formando líderes para el Reino de Dios.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#nosotros" className="hover:text-brand-accent transition-colors">Nuestra Visión y Misión</a></li>
+                <li><a href="#impacto" className="hover:text-brand-accent transition-colors">Áreas de Acción</a></li>
+                <li><a href="#galeria" className="hover:text-brand-accent transition-colors">Galería de Proyectos</a></li>
+                <li><a href="#donar" className="hover:text-brand-accent transition-colors">Ser Voluntario</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Contacto</h4>
+              <ul className="space-y-4 text-sm text-slate-400">
+                <li className="flex items-center gap-3"><MapPin className="w-4 h-4 text-brand-accent"/> Loreto, Perú (Sede Central)</li>
+                <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-brand-accent"/> contacto@herederosdedios.org</li>
+                <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-brand-accent"/> +51 900 000 000</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-500 text-sm">
+              © 2024 Asociación Misión de Cristo Herederos de Dios. Todos los derechos reservados.
+            </p>
+            <div className="flex gap-4 text-sm text-slate-500">
+              <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
+              <a href="#" className="hover:text-white transition-colors">Resolución N° 124-97-SUNARP</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
