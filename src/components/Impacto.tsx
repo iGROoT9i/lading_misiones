@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import { Globe } from 'lucide-react';
+import Globe3D from './Globe3D';
 
 export default function Impacto() {
   const containerVariants: Variants = {
@@ -40,12 +40,12 @@ export default function Impacto() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px]"
         >
           {/* Caja 1: Desarrollo Integral (Grande) */}
-          <motion.div variants={itemVariants} className="md:col-span-2 relative rounded-[2rem] overflow-hidden group">
+          <motion.div variants={itemVariants} className="md:col-span-2 relative rounded-[2rem] overflow-hidden group min-h-[300px]">
             <img
-              src="/images/desarrollo-integral-3.jpeg"
+              src="/images/desarrollo-integral-3.webp"
               alt="Educación"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -62,9 +62,9 @@ export default function Impacto() {
           </motion.div>
 
           {/* Caja 2: Salud (Pequeña) */}
-          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group">
+          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group min-h-[300px]">
             <img
-              src="/images/bienestar-medico-1.jpeg"
+              src="/images/bienestar-medico-1.webp"
               alt="Salud Médica"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -81,9 +81,9 @@ export default function Impacto() {
           </motion.div>
 
           {/* Caja 3: Ayuda Social (Pequeña) */}
-          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group">
+          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group min-h-[300px]">
             <img
-              src="/images/ayuda-social-2.jpeg"
+              src="/images/ayuda-social-2.webp"
               alt="Ayuda Social"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -102,10 +102,10 @@ export default function Impacto() {
           {/* Caja 4: Estadísticas (Grande) */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 relative rounded-[2rem] overflow-hidden bg-brand-dark p-10 flex flex-col justify-center"
+            className="md:col-span-2 relative rounded-[2rem] overflow-hidden bg-brand-dark p-8 md:p-10 flex flex-col justify-center min-h-[300px]"
           >
-            <div className="absolute -right-20 -top-20 opacity-5">
-              <Globe className="w-[350px] h-[350px] text-white" />
+            <div className="absolute -right-10 -top-10 pointer-events-none">
+              <Globe3D />
             </div>
             <div className="grid sm:grid-cols-2 gap-8 relative z-10">
               <div>
