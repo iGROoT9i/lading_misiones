@@ -107,17 +107,23 @@ export default function Impacto() {
             <div className="absolute -right-10 -top-10 pointer-events-none">
               <Globe3D />
             </div>
-            <div className="grid sm:grid-cols-2 gap-8 relative z-10">
+            <div className="grid sm:grid-cols-3 gap-8 relative z-10">
               <div>
-                <h4 className="text-6xl font-bold text-brand-accent mb-2">Miles+</h4>
-                <p className="text-slate-300 text-lg">
-                  De vidas impactadas anualmente a través de evangelización y apoyo social a nivel regional y nacional.
+                <h4 className="text-5xl font-bold text-brand-accent mb-2">+100</h4>
+                <p className="text-slate-300 text-base">
+                  Familias alimentadas y apoyadas constantemente a través de nuestros comedores públicos.
                 </p>
               </div>
               <div>
-                <h4 className="text-6xl font-bold text-brand-accent mb-2">100%</h4>
-                <p className="text-slate-300 text-lg">
-                  De las donaciones se destinan directamente a proyectos sin fines de lucro y sostenimiento de programas.
+                <h4 className="text-5xl font-bold text-brand-accent mb-2">+20</h4>
+                <p className="text-slate-300 text-base">
+                  Voluntarios activos dedicando su tiempo, esfuerzo y amor a la labor de la misión.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-5xl font-bold text-brand-accent mb-2">100%</h4>
+                <p className="text-slate-300 text-base">
+                  De las donaciones se destinan directamente a proyectos sin fines de lucro y sostenimiento.
                 </p>
               </div>
             </div>
