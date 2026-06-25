@@ -33,16 +33,50 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="mt-12 inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-left">
-            <p className="text-slate-300 text-sm uppercase tracking-wider mb-2 font-semibold">
-              Cuentas Bancarias / Yape
-            </p>
-            <p className="text-white flex items-center gap-2 mb-2">
-              <Building className="text-brand-accent w-5 h-5" /> BCP: 191-0000000-0-00
-            </p>
-            <p className="text-white flex items-center gap-2">
-              <Smartphone className="text-brand-accent w-5 h-5" /> Yape: 910 348 794 (Elias La Torre Murayari)
-            </p>
+          <div className="mt-12 w-full max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 shadow-2xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              
+              {/* Interbank Card */}
+              <div className="bg-brand-dark/40 border border-white/5 rounded-2xl p-6 hover:border-brand-accent/30 transition-all group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-brand-accent/10 p-2 rounded-lg group-hover:bg-brand-accent/20 transition-colors">
+                    <Building className="text-brand-accent w-6 h-6" />
+                  </div>
+                  <p className="font-bold text-white text-lg">Interbank <span className="font-normal text-slate-400 text-sm ml-1">(Soles)</span></p>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Cuenta Ahorros</p>
+                    <p className="text-brand-accent font-mono text-lg tracking-wide">200 3090603758</p>
+                  </div>
+                  <div>
+                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Código Interbancario (CCI)</p>
+                    <p className="text-brand-accent font-mono text-sm tracking-wide">003 200 013090603758 30</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Yape Card */}
+              <div className="bg-brand-dark/40 border border-white/5 rounded-2xl p-6 hover:border-[#742384]/50 transition-all group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-[#742384]/10 p-2 rounded-lg group-hover:bg-[#742384]/20 transition-colors">
+                    <Smartphone className="text-[#742384] w-6 h-6" />
+                  </div>
+                  <p className="font-bold text-white text-lg">Yape</p>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Número a Yapear</p>
+                    <p className="text-[#742384] font-mono text-xl font-bold tracking-widest bg-white inline-block px-3 py-1 rounded-md">910 348 794</p>
+                  </div>
+                  <div>
+                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Titular de la cuenta</p>
+                    <p className="text-slate-300">Elias La Torre Murayari</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </motion.div>
       </section>
