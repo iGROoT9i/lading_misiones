@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vertical" x2="0" y2="1"><stop stop-color="white" stop-opacity=".15"/><stop offset=".06" stop-color="white"/><stop offset=".83" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <filter id="paper" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".025 .05" numOctaves="2" seed="8" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="8" xChannelSelector="R" yChannelSelector="G"/></filter>
+  </defs>
+  <path fill="url(#vertical)" filter="url(#paper)" d="M10 30 Q85 9 153 22 T323 19 T510 23 T718 16 T990 29 L996 204 Q981 277 996 343 L993 541 Q1004 607 987 652 L968 704 Q883 737 813 718 T624 736 T435 722 T242 738 T16 699 L5 533 Q17 450 4 361 L9 204 Z"/>
+</svg>

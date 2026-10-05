@@ -27,6 +27,7 @@ export default function Impacto() {
           variants={itemVariants}
           className="text-center mb-16"
         >
+          <span className="eyebrow section-eyebrow">DONDE EL AMOR SE HACE TANGIBLE</span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">Áreas de Impacto</h2>
           <p className="text-slate-500 max-w-2xl mx-auto text-lg">
             Nuestro trabajo se extiende a través de múltiples frentes, llevando ayuda espiritual,
@@ -40,60 +41,63 @@ export default function Impacto() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[300px]"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[340px]"
         >
           {/* Caja 1: Desarrollo Integral (Grande) */}
-          <motion.div variants={itemVariants} className="md:col-span-2 relative rounded-[2rem] overflow-hidden group min-h-[300px]">
+          <motion.div variants={itemVariants} className="md:col-span-2 relative rounded-[1.25rem] overflow-hidden group min-h-[300px]">
             <img
+              loading="lazy"
               src="/images/desarrollo-integral-3.webp"
               alt="Educación"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 w-full">
               <span className="inline-block px-3 py-1 bg-brand-accent text-brand-dark text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                 Educación y Nutrición
               </span>
               <h3 className="text-3xl font-bold text-white mb-2">Desarrollo Integral</h3>
-              <p className="text-slate-200 opacity-0 group-hover:opacity-100 transition-all duration-500 max-w-lg transform translate-y-4 group-hover:translate-y-0">
+              <p className="text-slate-200 opacity-100 transition-all duration-500 max-w-lg ">
                 Promovemos centros educativos, teológicos y comedores públicos para nutrir mente, cuerpo y espíritu, elevando el índice educacional.
               </p>
             </div>
           </motion.div>
 
           {/* Caja 2: Salud (Pequeña) */}
-          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group min-h-[300px]">
+          <motion.div variants={itemVariants} className="relative rounded-[1.25rem] overflow-hidden group min-h-[300px]">
             <img
+              loading="lazy"
               src="/images/bienestar-medico-1.webp"
               alt="Salud Médica"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8">
               <span className="inline-block px-3 py-1 bg-brand-primary text-white text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                 Salud
               </span>
               <h3 className="text-2xl font-bold text-white mb-2">Bienestar Médico</h3>
-              <p className="text-slate-200 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+              <p className="text-slate-200 text-sm opacity-100 transition-all duration-500 ">
                 Campañas médicas gratuitas en la región de Loreto y pueblos jóvenes necesitados.
               </p>
             </div>
           </motion.div>
 
           {/* Caja 3: Ayuda Social (Pequeña) */}
-          <motion.div variants={itemVariants} className="relative rounded-[2rem] overflow-hidden group min-h-[300px]">
+          <motion.div variants={itemVariants} className="relative rounded-[1.25rem] overflow-hidden group min-h-[300px]">
             <img
+              loading="lazy"
               src="/images/ayuda-social-2.webp"
               alt="Ayuda Social"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8">
               <span className="inline-block px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
                 Asistencia
               </span>
               <h3 className="text-2xl font-bold text-white mb-2">Ayuda Social Activa</h3>
-              <p className="text-slate-200 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+              <p className="text-slate-200 text-sm opacity-100 transition-all duration-500 ">
                 Protección a madres solteras, huérfanos y ancianos en extrema pobreza.
               </p>
             </div>
@@ -102,7 +106,7 @@ export default function Impacto() {
           {/* Caja 4: Estadísticas (Grande) */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 relative rounded-[2rem] overflow-hidden bg-brand-dark p-8 md:p-10 flex flex-col justify-center min-h-[300px]"
+            className="md:col-span-2 relative rounded-[1.25rem] overflow-hidden bg-brand-dark p-8 md:p-10 flex flex-col justify-center min-h-[300px]"
           >
             <div className="absolute -right-10 -top-10 pointer-events-none">
               <Globe3D />

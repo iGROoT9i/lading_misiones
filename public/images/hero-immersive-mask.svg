@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" preserveAspectRatio="none">
+  <defs>
+    <filter id="brush" x="-15%" y="-5%" width="130%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".028 .075" numOctaves="3" seed="12" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="24" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <linearGradient id="fade"><stop stop-color="white" stop-opacity="0"/><stop offset=".055" stop-color="white" stop-opacity=".7"/><stop offset=".115" stop-color="white"/><stop offset="1" stop-color="white"/></linearGradient>
+  </defs>
+  <path filter="url(#brush)" fill="url(#fade)" d="M225 -30 C135 10 163 71 107 133 S53 235 76 294 S24 394 57 469 S33 563 87 647 S110 744 183 792 S290 847 387 914 L1030 930 L1030 -30Z"/>
+</svg>

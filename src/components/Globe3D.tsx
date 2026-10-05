@@ -5,45 +5,58 @@ export default function Globe3D() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    let phi = 0;
-    if (!canvasRef.current) return;
-
-    const globe = createGlobe(canvasRef.current, {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const globe = createGlobe(canvas, {
       devicePixelRatio: 2,
       width: 700,
       height: 700,
       phi: 0,
-      theta: 0.3, // Tilt
-      dark: 1, // 1 is fully dark
+      theta: 0.3,
+      dark: 1,
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
-      // Color matching your brand (slate-900 / blue-800 mix)
-      baseColor: [0.1, 0.2, 0.4], 
-      // Marker color matching your brand-accent (amber/gold)
-      markerColor: [1, 0.8, 0.1], 
+      baseColor: [0.1, 0.2, 0.4],
+      markerColor: [1, 0.8, 0.1],
       glowColor: [0.2, 0.3, 0.6],
-      markers: [
-        // Coordinates for Loreto, Peru
-        { location: [-3.74, -73.25], size: 0.1 }
-      ],
-      onRender: (state: any) => {
-        state.phi = phi;
-        phi += 0.005; // Rotation speed
-      },
-    } as any);
-
+      markers: [{ location: [-3.74, -73.25], size: 0.1 }],
+    });
+    let frame = 0;
+    let previousTime = 0;
+    let phi = 0;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const animate = (time: number) => {
+      if (previousTime) phi += Math.min(time - previousTime, 50) * 0.0003;
+      previousTime = time;
+      globe.update({ phi });
+      frame = requestAnimationFrame(animate);
+    };
+    let visible = false;
+    const syncAnimation = () => {
+      cancelAnimationFrame(frame);
+      previousTime = 0;
+      if (visible && !preference.matches && !document.hidden) frame = requestAnimationFrame(animate);
+    };
+    const observer = new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      syncAnimation();
+    });
+    observer.observe(canvas);
+    preference.addEventListener('change', syncAnimation);
+    document.addEventListener('visibilitychange', syncAnimation);
     return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      preference.removeEventListener('change', syncAnimation);
+      document.removeEventListener('visibilitychange', syncAnimation);
       globe.destroy();
     };
   }, []);
 
   return (
-    <div style={{ width: '100%', maxWidth: '350px', aspectRatio: '1/1' }} className="flex items-center justify-center opacity-90 mx-auto">
-      <canvas
-        ref={canvasRef}
-        style={{ width: '100%', height: '100%', display: 'block' }}
-      />
+    <div aria-hidden="true" className="w-[350px] max-w-full aspect-square opacity-60">
+      <canvas ref={canvasRef} className="w-full h-full block" />
     </div>
   );
 }

@@ -25,15 +25,15 @@ export default function Footer() {
             país.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-brand-accent text-brand-dark px-10 py-5 rounded-full font-bold text-lg hover:bg-yellow-400 hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3">
-              <Heart className="w-6 h-6 fill-current" /> Hacer una Donación
-            </button>
+            <a href="#formas-de-ayudar" className="bg-brand-accent text-brand-dark px-10 py-5 rounded-full font-bold text-lg hover:bg-yellow-400 hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3">
+              <Heart className="w-6 h-6 fill-current" /> Ver cómo donar
+            </a>
             <a href="https://wa.me/51910348794" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3">
               <Smartphone className="w-6 h-6 text-green-400" /> Contáctanos
             </a>
           </div>
 
-          <div className="mt-12 w-full max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 shadow-2xl">
+          <div id="formas-de-ayudar" className="scroll-mt-28 mt-12 w-full max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               
               {/* Interbank Card */}
@@ -46,11 +46,11 @@ export default function Footer() {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Cuenta Ahorros</p>
+                    <p className="text-slate-400 text-xs uppercase tracking-wider mb-1 font-semibold">Cuenta Ahorros</p>
                     <p className="text-brand-accent font-mono text-lg tracking-wide">200 3090603758</p>
                   </div>
                   <div>
-                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Código Interbancario (CCI)</p>
+                    <p className="text-slate-400 text-xs uppercase tracking-wider mb-1 font-semibold">Código Interbancario (CCI)</p>
                     <p className="text-brand-accent font-mono text-sm tracking-wide">003 200 013090603758 30</p>
                   </div>
                 </div>
@@ -66,11 +66,11 @@ export default function Footer() {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Número a Yapear</p>
+                    <p className="text-slate-400 text-xs uppercase tracking-wider mb-1 font-semibold">Número a Yapear</p>
                     <p className="text-[#742384] font-mono text-xl font-bold tracking-widest bg-white inline-block px-3 py-1 rounded-md">910 348 794</p>
                   </div>
                   <div>
-                    <p className="text-slate-500 text-xs uppercase tracking-wider mb-1 font-semibold">Titular de la cuenta</p>
+                    <p className="text-slate-400 text-xs uppercase tracking-wider mb-1 font-semibold">Titular de la cuenta</p>
                     <p className="text-slate-300">Elias La Torre Murayari</p>
                   </div>
                 </div>
@@ -88,9 +88,9 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="/images/logo.webp" 
+                  src="/images/mision-de-cristo.jpg" 
                   alt="Herederos de Dios Logo" 
-                  className="w-12 h-12 object-cover rounded-full bg-white shadow-md"
+                  className="w-12 h-12 object-contain rounded-full bg-white shadow-md"
                 />
                 <span className="font-heading font-bold text-lg text-white">Herederos de Dios</span>
               </div>
@@ -105,7 +105,7 @@ export default function Footer() {
                 <li><a href="#nosotros" className="hover:text-brand-accent transition-colors">Nuestra Visión y Misión</a></li>
                 <li><a href="#impacto" className="hover:text-brand-accent transition-colors">Áreas de Acción</a></li>
                 <li><a href="#galeria" className="hover:text-brand-accent transition-colors">Galería de Proyectos</a></li>
-                <li><a href="#donar" className="hover:text-brand-accent transition-colors">Ser Voluntario</a></li>
+                <li><a href="https://wa.me/51910348794" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors">Ser Voluntario</a></li>
               </ul>
             </div>
             <div>
@@ -133,11 +133,11 @@ export default function Footer() {
           </div>
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-500 text-sm">
-              © 2024 Asociación Misión de Cristo Herederos de Dios. Todos los derechos reservados.
+              © {new Date().getFullYear()} Asociación Misión de Cristo Herederos de Dios. Todos los derechos reservados.
             </p>
             <div className="flex gap-4 text-sm text-slate-500">
-              <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
-              <a href="#" className="hover:text-white transition-colors">Partida Registral N° 11178414</a>
+              <a href="mailto:mc.herederos2026@hotmail.com" className="hover:text-white transition-colors">Escríbenos</a>
+              <span>Partida Registral N° 11178414</span>
             </div>
           </div>
         </div>
